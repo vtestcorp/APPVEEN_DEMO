@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite 1]">
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="listeners.AnnotationTransformer"/>
+  </listeners>
+  <test name="Demo">
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="com.appveen.moduleone.testcases.TC_01_CreateDS"/>
+    </classes>
+  </test> <!-- Demo -->
+  <test name="Demo(failed)">
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="com.appveen.moduleone.testcases.TC_01_CreateDS">
+        <methods>
+          <include name="classInstitiate"/>
+          <include name="tearDown"/>
+          <include name="createDataService1"/>
+          <include name="setUp"/>
+          <include name="openReport"/>
+          <include name="checkResult"/>
+        </methods>
+      </class> <!-- com.appveen.moduleone.testcases.TC_01_CreateDS -->
+    </classes>
+  </test> <!-- Demo(failed) -->
+</suite> <!-- Failed suite [Suite 1] -->
